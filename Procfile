@@ -1,1 +1,1 @@
-python manage.py runesrver
+web: gunicorn cutter.wsgi --log-file -
