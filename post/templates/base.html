@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <!-- 본문폰트: a고딕 -->
+    <link href="https://fonts.googleapis.com/css?family=Gothic+A1&display=swap" rel="stylesheet">
+    <!-- 엔딩 손글씨폰트: 나눔펜 -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <!-- 디바이스에 따라 다른 css파일 참조 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/style.css" type="text/css">    
+    <link rel="stylesheet" href="../static/mobile.css" type="text/css">
+</head>
+<body>
+    <!-- header -->
+    <div class = "header" id="header">
+        <a href="{% url 'index' %}">
+            <img id = "logo" src="{% static 'logo.png' %}">
+        </a>
+        <!-- navigator -->
+        <ul class="nav nav-tabs nav-justified">
+            <li role="presentation"><a href="{% url 'info' %}">Who is Cutter?</a></li>
+            <li role="presentation" class="dropdown">
+                <a id="dLabel" class="dropdown-toggle" data-toggle="dropdown" data-target="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    Article <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                    <li><a href="{% url 'index' %}">1. intro</a></li>
+                    <li><a href="{% url 'csv' %}">2. 불법촬영물 소비와 여성물화</a></li>
+                    <li><a href="{% url 'conner' %}">3. 성상품화와 성적 대상화, 왜 여성만 문제냐고?</a></li>
+                    <li><a href="{% url 'embellishment' %}">4. 꾸밈은 어떻게 노동이 되었을까</a></li>
+                    <li><a href="{% url 'manbox' %}">5. 맨박스</a></li>
+                    <li><a href="{% url 'ending' %}">6. ending</a></li>            
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!-- main content -->
+    <div class="container" id="main">
+        {% block content %}
+        {% endblock %}
+    </div>
+    <div class="container" id="list">
+        <h5>더 많은 기사 보기</h5>
+        <hr>
+        <h4><a href="{% url 'index' %}">1. intro</a></h4>
+        <p>"아가씨"라는 말은 왜 불쾌할까</p>
+        <h4><a href="{% url 'csv' %}">2. 불법촬영물 소비와 여성물화</a></h4>
+        <p>구체적으로 여성물화는 어떻게 나타날까</p>
+        <h4><a href="{% url 'conner' %}">3. 성상품화와 성적 대상화, 왜 여성만 문제냐고?</a></h4>
+        <p>선생님이 알려줄게</p>
+        <h4><a href="{% url 'embellishment' %}">4. 꾸밈은 어떻게 노동이 되었을까</a></h4>
+        <p>꾸미는 건 정말 자기만족일까?</p>
+        <h4><a href="{% url 'manbox' %}">5. 맨박스</a></h4>
+        <p>역차별이 불만인 남자들에게</p>
+        <h4><a href="{% url 'ending' %}">6. ending</a></h4>
+        <p>누군가의 일기</p>
+    </div>
+    <!-- footer -->
+    <div class = "footer">
+        <p>copyright by cutter<p>
+    </div>
+    <div style="position: fixed; bottom: 10%; right: 10%;">
+        <a href="#header">
+            <span class="glyphicon glyphicon-triangle-top" style="color: #7E43B1;"></span>
+        </a>
+    </div>
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="{% static 'event.js' %}"></script>
+</body>
+</html>

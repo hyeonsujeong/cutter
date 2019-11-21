@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    padding-top: 70px;
+    font-family: 'Gothic A1', sans-serif;
+    background: #eee;
+}
+pre{
+    white-space: pre-wrap; 
+    font-family: 'Gothic A1', sans-serif;
+    background: #ffffff;
+    border: 0px;
+}
+.header {
+    width: 100%;
+    padding: 30px 30px 0px 30px;
+    text-align: center;
+    background: #7E43B1;
+    color: #ffffff;
+}
+.nav a {
+    float: left;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 0px;
+    text-decoration: none;
+}
+.left {
+    float: left;
+    width: 75%;
+}
+.right {
+    float: left;
+    width: 25%;
+    background-color: #eee;
+    padding-left: 20px;
+}
+.btn{
+    background: #7E43B1;
+    color: #ffffff;
+}
+.fakeimg {
+    float: left;
+    width: 100%;
+    background-color: gray;
+    padding-left: 20px;
+}
+.container {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+.footer {
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#fadein {
+    opacity: 0;
+}
+#logo{
+    width: 200px;
+}
+#list a {
+    color: black;
+    text-decoration: none;
+}
+#list a:hover{
+    color: #7E43B1;
+}
+
+#scroll_container
+{
+    background: rgb(254, 245, 255);
+    width: 70%;
+    min-width: 240px;
+}
+
+#scroll_container DIV
+{ 
+    margin:3%; 
+    padding:3%; 
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: large;
+}
+
+.hideme
+{
+    opacity:0;
+}
